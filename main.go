@@ -196,6 +196,7 @@ func (s Swimming) Calories() float64 {
 func (s Swimming) TrainingInfo() InfoMessage {
 	info := s.Training.TrainingInfo()
 	info.Calories = s.Calories()
+	info.Speed = s.meanSpeed()
 	return info
 }
 
